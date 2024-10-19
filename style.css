@@ -1,9 +1,36 @@
 html{   /*modo oscuro para la página web*/
-  background-color: #353535; /*Color de fondo (gris oscuro)*/ color: #FFF; /*Color de fuente (blanco)*/ text-align: justify; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #727272; /*Color de fondo (gris oscuro)*/
+  color: #FFF; /*Color de fuente (blanco)*/
+  text-align: justify; /*Alineacion del texto justificada*/
+  font-family: Arial, Helvetica, sans-serif; /*Cambio de fuente a Arial (resulta viendose mejor)*/
 }
-header{ /*Modificaciones al encabezado (logo)*/
-  background-color: #151515; font-size: 30px; text-align: center; /*Centrado de texto*/ padding: 10px; /*Tamaño de altura*/ margin: 0px; /*Tamaño de margen*/ 
+header, footer{ /*Modificaciones al encabezado (logo) y algo del footer*/
+  background-color: #00379e;
+  font-size: 2em; /*Tamaño de fuente un poco mas grande*/
+  text-align: center; /*Centrado de texto*/
+  padding: 20px; /*Tamaño de altura*/
+  box-shadow: 0px 0px 50px #000000; /*Agrega una sombra junto a su color obscuro*/
+  font-weight: bold; /*Hace la letra en negritas*/
 }
-.line1{ /*Linea entre header y main*/
-    color: #FFF;
+footer{
+  font-size: 15px;
+}
+main{
+  padding: 20px;
+  max-width: 1200px; /*Delimita el tamaño maximo que se usara en la etiqueta*/
+  margin: 0px;
+  background-color: #00000073;
+  border-radius: 10px; /*Bordes mas redondeados*/
+  text-align: center;
+  box-shadow: 0px 0px 20px #000000;
+}
+img{
+  height: 150px;
+  width: auto;
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+}
+p{
+  text-align: justify;
 }
