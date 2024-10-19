@@ -1,0 +1,9 @@
+html{   /*modo oscuro para la página web*/
+  background-color: #353535; /*Color de fondo (gris oscuro)*/ color: #FFF; /*Color de fuente (blanco)*/ text-align: justify; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header{ /*Modificaciones al encabezado (logo)*/
+  background-color: #151515; font-size: 30px; text-align: center; /*Centrado de texto*/ padding: 10px; /*Tamaño de altura*/ margin: 0px; /*Tamaño de margen*/ 
+}
+.line1{ /*Linea entre header y main*/
+    color: #FFF;
+}
