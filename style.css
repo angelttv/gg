@@ -1,9 +1,15 @@
-html{   /*modo oscuro para la página web*/
-  background-color: #FFF; /*Color de fondo (gris oscuro)*/
+html{   /*diseño la página web*/
+  /*Añadimos imagen de fondo y ponemos que no se repita, que cubra toda la pagina, que nos siga al desplazarnos y que este centrado*/
+  background-image: url(img/bg.jpg);
+  background-repeat: no-repeat; /*Evita que se repita*/
+  background-size: cover; /*Cubre toda la pagina*/
+  background-attachment: fixed; /*Sigue la camara o el enfoque de esta*/
+  background-position: center;  /*Lo centra*/
   color: #FFF; /*Color de fuente (blanco)*/
   text-align: justify; /*Alineacion del texto justificada*/
   font-family: Arial, Helvetica, sans-serif; /*Cambio de fuente a Arial (resulta viendose mejor)*/
   scroll-behavior: smooth; /*Hace un movimiento suave al deslizar*/
+  place-items: center;
 }
 header, footer{ /*Modificaciones al encabezado (logo) y algo del footer*/
   background-color: #00379e;
@@ -33,95 +39,62 @@ nav ul a li, nav ul a li :focus, nav ul a li :active{
 nav ul a li :last-child{    /*Evita que se haga el salto en el último item de lista*/
     padding-right: 0px;
 }
-nav ul a li :hover{   /*El hover sirve para cuando selecciones el mouse el item de lista se seleccione en este caso de azul*/
-    background-color: blue;
+nav ul a :hover{   /*El hover sirve para cuando selecciones el mouse el item de lista se seleccione en este caso de azul*/
+    color: black;
 }
 footer{
   font-size: 15px;
   margin-top: 30px;
   padding: 15px;
 }
-main{
-    color: #000;
+main, section, div{ /*Con este codigo centramos todo para que al momento de hacer zoom no se rompa*/
+  display: grid;
+  place-items: center;
+}
+section{
+  font-size: 1.5em;
+  margin-top: 20px;
+ background-color: #ff7e05;
   padding: 20px;
-  text-align: center;
+  color: #FFF;
+  box-shadow: 0px 0px 10px #000;
+}
+#s1{
+  background-color: #7a05ff;
+}
+#s2{
+  background-color: #e20303;
+}
+#s3{
+  background-color: rgb(164, 164, 0);
+}
+#s4{
+  background-color: #0F0;
+}
+#s5{
+  background-color: #00F;
+}
+section div{
+  font-size: medium;
+  margin-top: 0px;
+  background-color: #00000078;
+  color: #FFF;
+  box-shadow: 0px 0px 0px;
 }
 img{
-  height: 100px;
-  width: auto;
-  text-align: center;
-  margin: 0px;
-  padding: 10px;
-  box-shadow: 0px 0px 25px #000;
-  border-radius: 20px;
+  width: 150px;
+  height: auto;
+  box-shadow: 0px 0px 5px #000;
 }
-p{
-  text-align: justify;
+.imgtext{
+  display: grid;
+  grid-template-columns: 150px 1000px;
 }
-h3{
-    font-size: 1.5em;
-    margin-top: 20px;
-    background-color: #055dff;
-    padding: 10px;
-    color: #FFF;
-    max-width: 1500px;
-    box-shadow: 0px 0px 30px #000;
-}
-h3:first-child{
-    margin-top: 10px;
-}
-div{
-    justify-content: center;
-    max-width: 1200;
-}
-.imgtext {
-  display: flex;
-  align-items: center; /* Alinea la imagen y el texto verticalmente */
-  max-width: 750px;
-  margin-left: 80px;
-  margin-bottom: 20px; /* Espacio entre bloques */
-}
-
-.imgtext img {
-  margin-right: 40px; /* Espacio entre la imagen y el texto */
-  height: 100px;
-  width: auto;
-  box-shadow: 0px 0px 25px #000;
-  border-radius: 20px;
+.imgtext p, .reverse p{
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .reverse{
-    display: grid;
-    grid-template-columns: 500px 150px;
-    max-width: 1000px;
-}
-.reverse p{
-    max-width: 500px;
-    margin-right: 40px;
-}
-/*Añadimos compatibilidad para móviles*/
-@media (max-width: 768px) {
-    .imgtext img{
-        height: 50px;
-        border-radius: 0px;
-        width: auto;
-    }
-    .imgtext{
-       max-width: 500px;
-       margin-left: 0px;
-    }
-    .reverse{
-       grid-template-columns: 300px 50px;
-       margin-right: 30px;
-    }
-    .reverse p{
-        margin-right: 50px;
-        margin-left: 0px;
-        max-width: 500px;
-    }
-    .reverse img{
-        margin-top: 25px;
-        height: 50px;
-        width: auto;
-        border-radius: 0px;
-    }
+  display: grid;
+  grid-template-columns: 1000px 150px;
 }
