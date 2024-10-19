@@ -1,36 +1,127 @@
 html{   /*modo oscuro para la página web*/
-  background-color: #727272; /*Color de fondo (gris oscuro)*/
+  background-color: #FFF; /*Color de fondo (gris oscuro)*/
   color: #FFF; /*Color de fuente (blanco)*/
   text-align: justify; /*Alineacion del texto justificada*/
   font-family: Arial, Helvetica, sans-serif; /*Cambio de fuente a Arial (resulta viendose mejor)*/
+  scroll-behavior: smooth; /*Hace un movimiento suave al deslizar*/
 }
 header, footer{ /*Modificaciones al encabezado (logo) y algo del footer*/
   background-color: #00379e;
   font-size: 2em; /*Tamaño de fuente un poco mas grande*/
   text-align: center; /*Centrado de texto*/
-  padding: 20px; /*Tamaño de altura*/
-  box-shadow: 0px 0px 50px #000000; /*Agrega una sombra junto a su color obscuro*/
+  padding: 10px; /*Tamaño de altura*/
+  box-shadow: 0px 0px 10px #000000; /*Agrega una sombra junto a su color obscuro*/
   font-weight: bold; /*Hace la letra en negritas*/
+}
+nav{
+    background-color: #0447c4;
+    text-align: center;
+    box-shadow: 0px 0px 10px #000000;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+nav ul{
+    list-style: none; /*Elimina las viñetas en las listas*/
+    display: flex; /*Hace que estén en una sola fila todos los li*/
+    justify-content: center; /*Centra los objetos de la barra de nav*/
+}
+nav ul a li, nav ul a li :focus, nav ul a li :active{
+    text-decoration: none; /*Elimina el subrayado*/
+    color: #FFF;
+    margin-right: 20px /*Añade espaciado entre las opciones*/
+}
+nav ul a li :last-child{    /*Evita que se haga el salto en el último item de lista*/
+    padding-right: 0px;
+}
+nav ul a li :hover{   /*El hover sirve para cuando selecciones el mouse el item de lista se seleccione en este caso de azul*/
+    background-color: blue;
 }
 footer{
   font-size: 15px;
+  margin-top: 30px;
+  padding: 15px;
 }
 main{
+    color: #000;
   padding: 20px;
-  max-width: 1200px; /*Delimita el tamaño maximo que se usara en la etiqueta*/
-  margin: 0px;
-  background-color: #00000073;
-  border-radius: 10px; /*Bordes mas redondeados*/
   text-align: center;
-  box-shadow: 0px 0px 20px #000000;
 }
 img{
-  height: 150px;
+  height: 100px;
   width: auto;
   text-align: center;
   margin: 0px;
   padding: 10px;
+  box-shadow: 0px 0px 25px #000;
+  border-radius: 20px;
 }
 p{
   text-align: justify;
+}
+h3{
+    font-size: 1.5em;
+    margin-top: 20px;
+    background-color: #055dff;
+    padding: 10px;
+    color: #FFF;
+    max-width: 1500px;
+    box-shadow: 0px 0px 30px #000;
+}
+h3:first-child{
+    margin-top: 10px;
+}
+div{
+    justify-content: center;
+    max-width: 1200;
+}
+.imgtext {
+  display: flex;
+  align-items: center; /* Alinea la imagen y el texto verticalmente */
+  max-width: 750px;
+  margin-left: 80px;
+  margin-bottom: 20px; /* Espacio entre bloques */
+}
+
+.imgtext img {
+  margin-right: 40px; /* Espacio entre la imagen y el texto */
+  height: 100px;
+  width: auto;
+  box-shadow: 0px 0px 25px #000;
+  border-radius: 20px;
+}
+.reverse{
+    display: grid;
+    grid-template-columns: 500px 150px;
+    max-width: 1000px;
+}
+.reverse p{
+    max-width: 500px;
+    margin-right: 40px;
+}
+/*Añadimos compatibilidad para móviles*/
+@media (max-width: 768px) {
+    .imgtext img{
+        height: 50px;
+        border-radius: 0px;
+        width: auto;
+    }
+    .imgtext{
+       max-width: 500px;
+       margin-left: 0px;
+    }
+    .reverse{
+       grid-template-columns: 300px 50px;
+       margin-right: 30px;
+    }
+    .reverse p{
+        margin-right: 50px;
+        margin-left: 0px;
+        max-width: 500px;
+    }
+    .reverse img{
+        margin-top: 25px;
+        height: 50px;
+        width: auto;
+        border-radius: 0px;
+    }
 }
