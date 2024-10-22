@@ -107,7 +107,7 @@ div img{
   display: grid;
   grid-template-columns: 900px 150px;
 }
-/*Añadimos soporte para móviles*/
+/*Añadimos soporte para móviles (achicamos todo)*/
 @media (max-width: 400px) {
     div img{
         width: 40px;
@@ -147,5 +147,30 @@ div img{
     }
     section{
       padding: 5px;
+    }
+}
+
+/*Soporte para moviles más grandes (achicamos todo de manera leve)*/
+@media (max-width:700px){
+    div img{
+        width: 80px;
+        height: auto;
+        padding: 0px;
+    }
+    h3{
+        padding: 0px;
+        font-size: 40px;
+    }
+    section{
+        padding: 10px;
+    }
+    div p{
+        font-size: 20px;
+    }
+    .imgtext{
+        grid-template-columns: 100px auto;
+    }
+    .reverse{
+        grid-template-columns: auto 100px;
     }
 }
